@@ -1,1 +1,5 @@
 /* Write your CSS code here */
+.blog-list {
+  list-style-type: none;
+  padding: 10px;
+}

@@ -1,0 +1,28 @@
+.blog-image {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.blog-data-cont {
+  padding: 30px 50px;
+}
+
+.blog-data-cont h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+}
+
+.blog-container div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.blog-container p {
+  font-family: 'Roboto';
+  color: #2f4f4f;
+  font-size: 13px;
+  font-weight: 500;
+}

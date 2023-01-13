@@ -7,9 +7,15 @@
   list-style-type: none;
   border: 1px solid #d3d3d3;
   padding: 10px;
-  margin: 10px 0px;
+  margin: 10px;
   border-radius: 10px;
   display: flex;
+}
+
+@media (max-width: 576px) {
+  .each-blog-list {
+    flex-direction: column;
+  }
 }
 
 .blog-image-list {
@@ -20,18 +26,26 @@
   border-radius: 20px;
 }
 
-.each-blog-list div h5 {
+@media (max-width: 576px) {
+  .blog-image-list {
+    width: 200px;
+  }
+}
+
+.topic {
   font-weight: 500;
   color: #d3d3d3;
   font-size: 15px;
   margin: 5px 0px;
+  text-decoration: none;
 }
 
-.each-blog-list div h6 {
+.title {
   font-size: 15px;
   font-weight: 500;
   color: #000;
   margin: 0% auto;
+  text-decoration: none;
 }
 
 .avatar-image {
@@ -49,6 +63,12 @@
 .avatar-container {
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 576px) {
+  .avatar-container {
+    text-align: left;
+  }
 }
 
 .each-blog-list button {

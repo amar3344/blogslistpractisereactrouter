@@ -8,7 +8,7 @@ import './index.css'
 const url = 'https://apis.ccbp.in/blogs'
 
 class BlogList extends Component {
-  state = {blogsList: [], isLoading: false}
+  state = {blogsList: [], isLoading: true}
 
   componentDidMount() {
     this.getBlogsList()
@@ -18,7 +18,7 @@ class BlogList extends Component {
     const response = await fetch(url)
     const data = await response.json()
 
-    this.setState({blogsList: data, isLoading: true})
+    this.setState({blogsList: data, isLoading: false})
   }
 
   render() {
@@ -26,11 +26,17 @@ class BlogList extends Component {
 
     return (
       <div>
-        <ul>
+        <ul className="blog-list">
           {isLoading ? (
-            blogsList.map(item => <BlogItem key={item.id} blogDetails={item} />)
+            <Loader
+              data-testid="loader"
+              type="TailSpin"
+              color="#00bfff"
+              height={50}
+              width={50}
+            />
           ) : (
-            <Loader />
+            blogsList.map(item => <BlogItem key={item.id} blogDetails={item} />)
           )}
         </ul>
       </div>
